@@ -1,0 +1,24 @@
+<data>
+    <Date>15-05-2025</Date>
+    <Company_Name>John PLC</Company_Name>
+    <Company_Phone_Number>+447869054321</Company_Phone_Number>
+    <Company_Email_Address>advice_john@johnplc.com</Company_Email_Address>
+    <Company_Authorised_Signatory_Name>MR Dan Brock </Company_Authorised_Signatory_Name>
+    <Company_Position>Managing Director</Company_Position>
+    <Policy>
+        <Policy_Number>4567890324</Policy_Number>
+    </Policy>
+    <Change_Of_Address>
+        <Effective_Date>15-06-2025</Effective_Date>
+        <Organisation_Name>John Insurance PLC</Organisation_Name>
+        <Customer_Type>Organization</Customer_Type>
+        <Old_Address_Line1>18 Winstow House</Old_Address_Line1>
+        <Old_Address_Line2>Harry Lane</Old_Address_Line2>
+        <Old_Customer_City>London</Old_Customer_City>
+        <Old_Postcode>GH11WS</Old_Postcode>
+        <New_Address_Line1>26 Churchill House</New_Address_Line1>
+        <New_Address_Line2>Near Asda</New_Address_Line2>
+        <New_Customer_City>Peterborough</New_Customer_City>
+        <New_Postcode>PE11FU</New_Postcode>
+    </Change_Of_Address>
+</data>
