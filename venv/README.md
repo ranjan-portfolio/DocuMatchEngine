@@ -4,31 +4,27 @@ DocuMatchEngine is an AI-driven test suite designed to validate the structure an
 
 ## Inputs
 
-1. **Excel File:** Contains data items and their statuses (mandatory/optional).
+1. **XSD or DTD file:** For validating xml structure.
 2. **XML Data:** Provides placeholder data for document generation.
 3. **DOCX Template:** The document template containing placeholders, conditions, and static text.
-4. **Generated PDF:** The final output document to be validated.
+4. **PDF:** The pdf document to be validated.
 
 ---
 
 ## Processing Stages
 
-1. **Read Excel File:** Extract test cases and identify items marked as mandatory or optional.
-2. **Validate XML Data:** 
-    - Check if all mandatory items are present in the XML.
-    - **Pass:** Proceed to Stage 3.
-    - **Fail:** Mark the test case as failed, listing missing mandatory items.
-3. **Process DOCX Template:**
+1. **Loads XML file and DTD/XSD and validates structure:**
+2. **Process DOCX Template:**
     - Extract content (placeholders, conditions, loops, static text) from the DOCX.
-    - Apply XML data to generate the expected content text.
-4. **Content Validation:**
-    - Check if the generated content matches expectations.
-    - **Pass:** Proceed to Stage 5.
-    - **Fail:** Obtain LLM (Large Language Model) feedback, update input, and retry Stage 3.
-5. **PDF Validation:**
-    - Extract and compare the text content of the supplied PDF with the output from Stage 4.
-    - **Pass:** Test passes if everything matches.
-    - **Fail:** Test fails with detailed reasoning.
+3. ** Attempts to convert DOCX Template into Jinja Template **
+4. ** Jinja template is used to render pdf with all data placeholders replaced with xml data and logical conditions evaluated **
+5. ** Extracts pdf output generated in point 4 **
+6. ** Extracts pdf output from the pdf document to be tested **
+7. **Content Validation:**
+    - Passes Jinja template pdf and test pdf for content matching 
+8. **Marks the testcase pass or fail based on llm output from point 7:**
+    - **Pass:** Test passes if everything matches with reasoning and confidence score.
+    - **Fail:** Test fails with detailed reasoning and confidence score.
 
 ---
 
